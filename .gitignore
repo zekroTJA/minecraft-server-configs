@@ -1,0 +1,7 @@
+rclone.conf
+portainer/
+spigot/worlds
+spigot/locals/*
+!spigot/locals/ops.json
+!spigot/locals/permissions.yml
+!spigot/locals/server.properties

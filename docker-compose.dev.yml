@@ -1,0 +1,29 @@
+services:
+  portainer:
+    image: "portainer/portainer-ce:latest"
+    volumes:
+      - "./portainer:/data"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    restart: on-failure
+    labels:
+      traefik.enable: "true"
+      traefik.http.routers.portainer.entrypoints: "http"
+      traefik.http.routers.portainer.tls: "false"
+      traefik.http.routers.portainer.rule: "Host(`portainer.zekro.local`)"
+      traefik.http.services.portainer.loadbalancer.server.port: "9000"
+
+  spigot:
+    labels:
+      traefik.enable: "true"
+      traefik.http.routers.spigot.entrypoints: "http"
+      traefik.http.routers.spigot.tls: "false"
+      traefik.http.routers.spigot.rule: "Host(`zekro.local`)"
+      traefik.http.services.spigot.loadbalancer.server.port: "8123"
+
+  grafana:
+    labels:
+      traefik.enable: "true"
+      traefik.http.routers.grafana.entrypoints: "http"
+      traefik.http.routers.grafana.tls: "false"
+      traefik.http.routers.grafana.rule: "Host(`grafana.zekro.local`)"
+      
