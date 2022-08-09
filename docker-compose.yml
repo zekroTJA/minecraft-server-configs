@@ -35,7 +35,7 @@ services:
       traefik.enable: "true"
       traefik.http.routers.portainer.entrypoints: "https"
       traefik.http.routers.portainer.tls: "true"
-      traefik.http.routers.portainer.rule: "Host(`portainer.mc.zekro.de`)"
+      traefik.http.routers.portainer.rule: "Host(`docker.mc.zekro.de`)"
       traefik.http.services.portainer.loadbalancer.server.port: "9000"
 
   spigot:

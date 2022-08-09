@@ -1,0 +1,34 @@
+[
+  {
+    "domain": "zekro.de",
+    "subname": "_minecraft._tcp.mc",
+    "name": "_minecraft._tcp.mc.zekro.de.",
+    "records": ["0 5 24693 ichigo.zekro.de."],
+    "ttl": 3600,
+    "type": "SRV"
+  },
+  {
+    "domain": "zekro.de",
+    "subname": "mc",
+    "name": "mc.zekro.de.",
+    "records": ["45.88.189.85"],
+    "ttl": 3600,
+    "type": "A"
+  },
+  {
+    "domain": "zekro.de",
+    "subname": "grafana.mc",
+    "name": "grafana.mc.zekro.de.",
+    "records": ["45.88.189.85"],
+    "ttl": 3600,
+    "type": "A"
+  },
+  {
+    "domain": "zekro.de",
+    "subname": "docker.mc",
+    "name": "docker.mc.zekro.de.",
+    "records": ["45.88.189.85"],
+    "ttl": 3600,
+    "type": "A"
+  }
+]
