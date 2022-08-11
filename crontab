@@ -1,0 +1,6 @@
+ 0 5,17 * * * docker exec root_spigot_1 rcon "say ATTENTION: Server will restart in one hour!"
+30 5,17 * * * docker exec root_spigot_1 rcon "say ATTENTION: Server will restart in 30 minutes!"
+50 5,17 * * * docker exec root_spigot_1 rcon "say ATTENTION: Server will restart in 10 minutes!"
+55 5,17 * * * docker exec root_spigot_1 rcon "say ATTENTION: Server will restart in 5 minutes!"
+59 5,17 * * * docker exec root_spigot_1 rcon "say ATTENTION: Server will restart in one minute!"
+ 0 6,18 * * * docker exec root_spigot_1 rcon "stop"
