@@ -35,6 +35,7 @@ services:
       traefik.enable: "true"
       traefik.http.routers.portainer.entrypoints: "https"
       traefik.http.routers.portainer.tls: "true"
+      traefik.http.routers.portainer.tls.certresolver: "le"
       traefik.http.routers.portainer.rule: "Host(`docker.mc.zekro.de`)"
       traefik.http.services.portainer.loadbalancer.server.port: "9000"
 
@@ -63,6 +64,7 @@ services:
       traefik.enable: "true"
       traefik.http.routers.spigot.entrypoints: "https"
       traefik.http.routers.spigot.tls: "true"
+      traefik.http.routers.spigot.tls.certresolver: "le"
       traefik.http.routers.spigot.rule: "Host(`mc.zekro.de`)"
       traefik.http.services.spigot.loadbalancer.server.port: "8123"
 
@@ -84,4 +86,5 @@ services:
       traefik.enable: "true"
       traefik.http.routers.grafana.entrypoints: "https"
       traefik.http.routers.grafana.tls: "true"
+      traefik.http.routers.grafana.tls.certresolver: "le"
       traefik.http.routers.grafana.rule: "Host(`grafana.mc.zekro.de`)"
