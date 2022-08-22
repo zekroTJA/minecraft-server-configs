@@ -49,6 +49,7 @@ services:
       XMX: 4G
       MAX_AGE_BACKUP_FILES: 30d
       PRE_START_BACKUP: "true"
+      POST_START_BACKUP: "false"
     ports:
       - '25565:25565'
       - '25575:25575'

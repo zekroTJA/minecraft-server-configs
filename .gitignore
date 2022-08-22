@@ -5,3 +5,6 @@ spigot/locals/*
 !spigot/locals/ops.json
 !spigot/locals/permissions.yml
 !spigot/locals/server.properties
+spigot/plugins/dynmap/**
+!spigot/plugins/dynmap/configuration.txt
+!spigot/plugins/dynmap/markers.yml
