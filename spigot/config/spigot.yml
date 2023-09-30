@@ -41,12 +41,12 @@ messages:
   restart: Server is restarting
 commands:
   replace-commands:
-  - setblock
-  - summon
-  - testforblock
-  - tellraw
+    - setblock
+    - summon
+    - testforblock
+    - tellraw
   spam-exclusions:
-  - /skill
+    - /skill
   silent-commandblock-console: false
   log: true
   tab-complete: 0
@@ -54,7 +54,7 @@ commands:
 advancements:
   disable-saving: false
   disabled:
-  - minecraft:story/disabled
+    - minecraft:story/disabled
 players:
   disable-saving: false
 world-settings:
@@ -69,6 +69,7 @@ world-settings:
       tick-inactive-villagers: true
       ignore-spectators: false
     entity-tracking-range:
+      display: 128
       players: 48
       animals: 48
       monsters: 48
@@ -96,6 +97,9 @@ world-settings:
     seed-fossil: 14357921
     seed-portal: 34222645
     growth:
+      twistingvines-modifier: 100
+      weepingvines-modifier: 100
+      cavevines-modifier: 100
       cactus-modifier: 100
       cane-modifier: 100
       melon-modifier: 100
@@ -140,6 +144,8 @@ world-settings:
     trident-despawn-rate: 1200
     zombie-aggressive-towards-villager: true
     nerf-spawner-mobs: false
+  worldeditregentempworld:
+    verbose: false
 config-version: 12
 stats:
   disable-saving: false
