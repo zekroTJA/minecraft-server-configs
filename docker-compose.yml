@@ -1,6 +1,6 @@
 secrets:
- minecraftrclone:
-   file: rclone.conf
+  minecraftrclone:
+    file: rclone.conf
 
 services:
   traefik:
@@ -24,7 +24,7 @@ services:
       - "/etc/cert:/etc/cert:ro"
       - "/etc/certstore:/etc/certstore"
       - "/etc/localtime:/etc/localtime:ro"
-  
+
   portainer:
     image: "portainer/portainer-ce:latest"
     volumes:
@@ -40,24 +40,24 @@ services:
       traefik.http.services.portainer.loadbalancer.server.port: "9000"
 
   spigot:
-    image: 'ghcr.io/zekrotja/spigot-autobuild:jdk-17'
-    restart: always
+    image: "ghcr.io/zekrotja/spigot-autobuild:jdk-17"
+    restart: unless-stopped
     environment:
-      MC_VERSION: "1.19.1"
+      MC_VERSION: "1.20.1"
       BUILD_CACHING: "true"
-      XMS: 2G
-      XMX: 4G
+      XMS: 4G
+      XMX: 8G
       MAX_AGE_BACKUP_FILES: 30d
       PRE_START_BACKUP: "true"
       POST_START_BACKUP: "false"
     ports:
-      - '25565:25565'
-      - '25575:25575'
+      - "24693:25565"
+      - "25575:25575"
     volumes:
-      - './spigot/config:/etc/mcserver/config'
-      - './spigot/plugins:/etc/mcserver/plugins'
-      - './spigot/worlds:/etc/mcserver/worlds'
-      - './spigot/locals:/etc/mcserver/locals'
+      - "./spigot/config:/etc/mcserver/config"
+      - "./spigot/plugins:/etc/mcserver/plugins"
+      - "./spigot/worlds:/etc/mcserver/worlds"
+      - "./spigot/locals:/etc/mcserver/locals"
     secrets:
       - source: minecraftrclone
         target: rcloneconfig
