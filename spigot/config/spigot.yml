@@ -20,9 +20,9 @@ settings:
   moved-wrongly-threshold: 0.0625
   moved-too-quickly-multiplier: 10.0
   timeout-time: 60
-  restart-on-crash: true
+  restart-on-crash: false
   restart-script: ./start.sh
-  netty-threads: 4
+  netty-threads: 6
   attribute:
     maxHealth:
       max: 2048.0
@@ -68,11 +68,12 @@ world-settings:
       misc: 16
       tick-inactive-villagers: true
       ignore-spectators: false
+    # The range in which entities will be visible
     entity-tracking-range:
       display: 128
-      players: 48
+      players: 128
       animals: 48
-      monsters: 48
+      monsters: 128
       misc: 32
       other: 64
     ticks-per:
