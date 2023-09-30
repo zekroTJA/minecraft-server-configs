@@ -27,19 +27,19 @@ deftemplatesuffix: hires
 #  postgres: PostgreSQL database, at hostname:port in database, accessed via userid with password
 storage:
   # Filetree storage (standard tree of image files for maps)
-  type: filetree
+  # type: filetree
   # SQLite db for map storage (uses dbfile as storage location)
   #type: sqlite
   #dbfile: dynmap.db
   # MySQL DB for map storage (at 'hostname':'port' with flags "flags" in database 'database' using user 'userid' password 'password' and table prefix 'prefix')
-  #type: mysql
-  #hostname: localhost
-  #port: 3306
-  #database: dynmap
-  #userid: dynmap
-  #password: dynmap
+  type: mysql
+  hostname: mysql
+  port: 3306
+  database: dynmap
+  userid: root
+  password: <retracted>
   #prefix: ""
-  #flags: "?allowReconnect=true&autoReconnect=true"
+  flags: "?allowReconnect=true&autoReconnect=true"
   #
   # AWS S3 backet web site
   #type: aws_s3
@@ -62,13 +62,13 @@ components:
     # (optional) if true, color codes in player display names are used
     use-name-colors: false
     # (optional) if true, player login IDs will be used for web chat when their IPs match
-    use-player-login-ip: true
+    use-player-login-ip: false
     # (optional) if use-player-login-ip is true, setting this to true will cause chat messages not matching a known player IP to be ignored
     require-player-login-ip: false
     # (optional) block player login IDs that are banned from chatting
     block-banned-player-chat: true
     # Require login for web-to-server chat (requires login-enabled: true)
-    webchat-requires-login: false
+    webchat-requires-login: true
     # If set to true, users must have dynmap.webchat permission in order to chat
     webchat-permissions: false
     # Limit length of single chat messages
@@ -358,7 +358,7 @@ disable-webserver: false
 allow-symlinks: true
 
 # Enable login support
-login-enabled: false
+login-enabled: true
 # Require login to access website (requires login-enabled: true)
 login-required: false
 

@@ -8,3 +8,9 @@ spigot/locals/*
 spigot/plugins/dynmap/**
 !spigot/plugins/dynmap/configuration.txt
 !spigot/plugins/dynmap/markers.yml
+spigot/plugins/Shopkeepers/**
+!spigot/plugins/Shopkeepers/config.yml
+spigot/plugins/WorldGuard/**
+!spigot/plugins/WorldGuard/config.yml
+spigot/plugins/WorldEdit/**
+!spigot/plugins/WorldEdit/config.yml

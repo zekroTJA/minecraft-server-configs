@@ -11,8 +11,63 @@ sets:
         areas: {
             }
         label: Markers
-        markers: {
-            }
+        markers:
+            voxain_plot_1:
+                world: world
+                markup: false
+                x: 33.0
+                icon: house
+                y: 77.0
+                z: 402.0
+                label: Voxain&#39;s Home
+            zekro_plot_1:
+                world: world
+                markup: false
+                x: 106.0
+                icon: house
+                y: 90.0
+                z: 967.0
+                label: zekro&#39;s Home
+            marker_1:
+                world: world
+                markup: false
+                x: -701.0
+                icon: house
+                y: 105.0
+                z: 1636.0
+                label: Zuhause von Lukas
+            marker_2:
+                world: world_nether
+                markup: false
+                x: -105.0
+                icon: default
+                y: 66.0
+                z: 212.0
+                label: Portal Lukas
+            marker_3:
+                world: world
+                markup: false
+                x: 465.0
+                icon: default
+                y: 58.0
+                z: 200.0
+                label: Skillkilller Home
+            marker_4:
+                world: world
+                markup: false
+                x: 13.0
+                icon: house
+                y: 70.0
+                z: 1139.0
+                label: luxtracon
+            marker_5:
+                world: world
+                markup: false
+                x: 3890.0
+                icon: default
+                y: 48.0
+                z: -1776.0
+                label: SinReX
         lines: {
             }
         layerprio: 0
